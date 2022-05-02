@@ -1,0 +1,307 @@
+The system is: Linux - 4.4.192-perf+ - armv8l
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /data/user/0/ru.iiec.cxxdroid/files/bin/clang 
+Build flags: -Wall;-std=c99
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/3.20.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /data/user/0/ru.iiec.cxxdroid/files/bin/clang++ 
+Build flags: -Wall;-std=c++17
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/3.20.3/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/data/user/0/ru.iiec.cxxdroid/files/bin/make -f Makefile cmTC_ed9d6/fast && /data/user/0/ru.iiec.cxxdroid/files/bin/make  -f CMakeFiles/cmTC_ed9d6.dir/build.make CMakeFiles/cmTC_ed9d6.dir/build
+make[1]: Entering directory '/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o
+/data/user/0/ru.iiec.cxxdroid/files/bin/clang   -Wall -std=c99    -v -MD -MT CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -c /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCCompilerABI.c
+clang version 9.0.1 
+Target: armv7a-unknown-linux-android21
+Thread model: posix
+InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin
+Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+ "/data/data/ru.iiec.cxxdroid/files/bin/clang-9" -cc1 -triple armv7-unknown-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu generic -target-feature +soft-float-abi -target-feature +fpregs -target-feature +vfp2 -target-feature +vfp2d16 -target-feature +vfp2d16sp -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -crypto -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.gcno -resource-dir /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1 -dependency-file CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -isysroot /data/user/0/ru.iiec.cxxdroid/files/sysroot -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include -internal-isystem /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include -Wall -std=c99 -fdebug-compilation-dir /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -x c /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCCompilerABI.c
+clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target armv7a-linux-androideabi21
+ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include
+ /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include
+ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi
+ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include
+End of search list.
+Linking C executable cmTC_ed9d6
+/data/data/ru.iiec.cxxdroid/files/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed9d6.dir/link.txt --verbose=1
+/data/user/0/ru.iiec.cxxdroid/files/bin/clang -Wall -std=c99  -lm -ldl -llog -lz -v CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -o cmTC_ed9d6 
+clang version 9.0.1 
+Target: armv7a-unknown-linux-android21
+Thread model: posix
+InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin
+Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+ "/data/user/0/ru.iiec.cxxdroid/files/bin/ld" --sysroot=/data/user/0/ru.iiec.cxxdroid/files/sysroot -pie -z noexecstack -EL --warn-shared-textrel -z now -z relro -X --hash-style=sysv --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_ed9d6 /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib -lm -ldl -llog -lz CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o
+make[1]: Leaving directory '/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include]
+    add: [/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include]
+    add: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi]
+    add: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include]
+  collapse include dir [/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include] ==> [/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include]
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi]
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+  implicit include dirs: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include;/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/data/user/0/ru.iiec.cxxdroid/files/bin/make -f Makefile cmTC_ed9d6/fast && /data/user/0/ru.iiec.cxxdroid/files/bin/make  -f CMakeFiles/cmTC_ed9d6.dir/build.make CMakeFiles/cmTC_ed9d6.dir/build]
+  ignore line: [make[1]: Entering directory '/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/data/user/0/ru.iiec.cxxdroid/files/bin/clang   -Wall -std=c99    -v -MD -MT CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -c /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: armv7a-unknown-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin]
+  ignore line: [Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [ "/data/data/ru.iiec.cxxdroid/files/bin/clang-9" -cc1 -triple armv7-unknown-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu generic -target-feature +soft-float-abi -target-feature +fpregs -target-feature +vfp2 -target-feature +vfp2d16 -target-feature +vfp2d16sp -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -crypto -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.gcno -resource-dir /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1 -dependency-file CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -isysroot /data/user/0/ru.iiec.cxxdroid/files/sysroot -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include -internal-isystem /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include -Wall -std=c99 -fdebug-compilation-dir /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -x c /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target armv7a-linux-androideabi21]
+  ignore line: [ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include]
+  ignore line: [ /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_ed9d6]
+  ignore line: [/data/data/ru.iiec.cxxdroid/files/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed9d6.dir/link.txt --verbose=1]
+  ignore line: [/data/user/0/ru.iiec.cxxdroid/files/bin/clang -Wall -std=c99  -lm -ldl -llog -lz -v CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -o cmTC_ed9d6 ]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: armv7a-unknown-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin]
+  ignore line: [Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  link line: [ "/data/user/0/ru.iiec.cxxdroid/files/bin/ld" --sysroot=/data/user/0/ru.iiec.cxxdroid/files/sysroot -pie -z noexecstack -EL --warn-shared-textrel -z now -z relro -X --hash-style=sysv --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_ed9d6 /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib -lm -ldl -llog -lz CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o]
+    arg [/data/user/0/ru.iiec.cxxdroid/files/bin/ld] ==> ignore
+    arg [--sysroot=/data/user/0/ru.iiec.cxxdroid/files/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=sysv] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ed9d6] ==> ignore
+    arg [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o] ==> obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+    arg [-lm] ==> lib [m]
+    arg [-ldl] ==> lib [dl]
+    arg [-llog] ==> lib [log]
+    arg [-lz] ==> lib [z]
+    arg [CMakeFiles/cmTC_ed9d6.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o] ==> obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o]
+  collapse obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtbegin_dynamic.o]
+  collapse obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtend_android.o]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x] ==> [/data/user/0/ru.iiec.cxxdroid/files/lib/gcc/arm-linux-androideabi/4.9.x]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/arm-linux-androideabi/lib]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/arm-linux-androideabi/lib]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+  implicit libs: [m;dl;log;z;gcc;dl;c;gcc;dl]
+  implicit objs: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtbegin_dynamic.o;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtend_android.o]
+  implicit dirs: [/data/user/0/ru.iiec.cxxdroid/files/lib/gcc/arm-linux-androideabi/4.9.x;/data/user/0/ru.iiec.cxxdroid/files/arm-linux-androideabi/lib;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/data/user/0/ru.iiec.cxxdroid/files/bin/make -f Makefile cmTC_99de8/fast && /data/user/0/ru.iiec.cxxdroid/files/bin/make  -f CMakeFiles/cmTC_99de8.dir/build.make CMakeFiles/cmTC_99de8.dir/build
+make[1]: Entering directory '/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o
+/data/user/0/ru.iiec.cxxdroid/files/bin/clang++   -Wall -std=c++17    -v -MD -MT CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -c /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp
+clang version 9.0.1 
+Target: armv7a-unknown-linux-android21
+Thread model: posix
+InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin
+Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+ "/data/data/ru.iiec.cxxdroid/files/bin/clang-9" -cc1 -triple armv7-unknown-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu generic -target-feature +soft-float-abi -target-feature +fpregs -target-feature +vfp2 -target-feature +vfp2d16 -target-feature +vfp2d16sp -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -crypto -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1 -dependency-file CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -isysroot /data/user/0/ru.iiec.cxxdroid/files/sysroot -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x/backward -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include -internal-isystem /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include -Wall -std=c++17 -fdeprecated-macro -fdebug-compilation-dir /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -x c++ /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target armv7a-linux-androideabi21
+ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x"
+ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x"
+ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x/backward"
+ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x
+ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include
+ /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include
+ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi
+ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include
+End of search list.
+Linking CXX executable cmTC_99de8
+/data/data/ru.iiec.cxxdroid/files/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99de8.dir/link.txt --verbose=1
+/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -Wall -std=c++17  -lm -ldl -llog -lz -v CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_99de8 
+clang version 9.0.1 
+Target: armv7a-unknown-linux-android21
+Thread model: posix
+InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin
+Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x
+ "/data/user/0/ru.iiec.cxxdroid/files/bin/ld" --sysroot=/data/user/0/ru.iiec.cxxdroid/files/sysroot -pie -z noexecstack -EL --warn-shared-textrel -z now -z relro -X --hash-style=sysv --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_99de8 /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib -lm -ldl -llog -lz CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -ldl -lc -lgcc -ldl /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o
+make[1]: Leaving directory '/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x]
+    add: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include]
+    add: [/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include]
+    add: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi]
+    add: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x] ==> [/data/user/0/ru.iiec.cxxdroid/files/include/c++/4.9.x]
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include]
+  collapse include dir [/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include] ==> [/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include]
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi]
+  collapse include dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+  implicit include dirs: [/data/user/0/ru.iiec.cxxdroid/files/include/c++/4.9.x;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include;/data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/data/user/0/ru.iiec.cxxdroid/files/bin/make -f Makefile cmTC_99de8/fast && /data/user/0/ru.iiec.cxxdroid/files/bin/make  -f CMakeFiles/cmTC_99de8.dir/build.make CMakeFiles/cmTC_99de8.dir/build]
+  ignore line: [make[1]: Entering directory '/storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/data/user/0/ru.iiec.cxxdroid/files/bin/clang++   -Wall -std=c++17    -v -MD -MT CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -c /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: armv7a-unknown-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin]
+  ignore line: [Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [ "/data/data/ru.iiec.cxxdroid/files/bin/clang-9" -cc1 -triple armv7-unknown-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu generic -target-feature +soft-float-abi -target-feature +fpregs -target-feature +vfp2 -target-feature +vfp2d16 -target-feature +vfp2d16sp -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -crypto -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1 -dependency-file CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o.d -sys-header-deps -MT CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -isysroot /data/user/0/ru.iiec.cxxdroid/files/sysroot -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x/backward -internal-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include -internal-isystem /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/include -internal-externc-isystem /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include -Wall -std=c++17 -fdeprecated-macro -fdebug-compilation-dir /storage/emulated/0/Programming/CRUD-Applications/Student-Database/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -x c++ /data/data/ru.iiec.cxxdroid/files/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target armv7a-linux-androideabi21]
+  ignore line: [ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x"]
+  ignore line: [ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/arm-linux-androideabi/c++/4.9.x"]
+  ignore line: [ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x/backward"]
+  ignore line: [ignoring nonexistent directory "/data/user/0/ru.iiec.cxxdroid/files/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../include/c++/4.9.x]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/local/include]
+  ignore line: [ /data/data/ru.iiec.cxxdroid/files/lib/clang/9.0.1/include]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include/arm-linux-androideabi]
+  ignore line: [ /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_99de8]
+  ignore line: [/data/data/ru.iiec.cxxdroid/files/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99de8.dir/link.txt --verbose=1]
+  ignore line: [/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -Wall -std=c++17  -lm -ldl -llog -lz -v CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_99de8 ]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: armv7a-unknown-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /data/user/0/ru.iiec.cxxdroid/files/bin]
+  ignore line: [Found candidate GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Selected GCC installation: /data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+  link line: [ "/data/user/0/ru.iiec.cxxdroid/files/bin/ld" --sysroot=/data/user/0/ru.iiec.cxxdroid/files/sysroot -pie -z noexecstack -EL --warn-shared-textrel -z now -z relro -X --hash-style=sysv --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_99de8 /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib -L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib -L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib -lm -ldl -llog -lz CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -ldl -lc -lgcc -ldl /data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o]
+    arg [/data/user/0/ru.iiec.cxxdroid/files/bin/ld] ==> ignore
+    arg [--sysroot=/data/user/0/ru.iiec.cxxdroid/files/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=sysv] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_99de8] ==> ignore
+    arg [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o] ==> obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib]
+    arg [-L/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib] ==> dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+    arg [-lm] ==> lib [m]
+    arg [-ldl] ==> lib [dl]
+    arg [-llog] ==> lib [log]
+    arg [-lz] ==> lib [z]
+    arg [CMakeFiles/cmTC_99de8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o] ==> obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o]
+  collapse obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtbegin_dynamic.o] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtbegin_dynamic.o]
+  collapse obj [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib/crtend_android.o] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtend_android.o]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x] ==> [/data/user/0/ru.iiec.cxxdroid/files/lib/gcc/arm-linux-androideabi/4.9.x]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/arm-linux-androideabi/lib]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/../lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/bin/../lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/arm-linux-androideabi/lib]
+  collapse library dir [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib] ==> [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+  implicit libs: [m;dl;log;z;stdc++;m;gcc;dl;c;gcc;dl]
+  implicit objs: [/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtbegin_dynamic.o;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib/crtend_android.o]
+  implicit dirs: [/data/user/0/ru.iiec.cxxdroid/files/lib/gcc/arm-linux-androideabi/4.9.x;/data/user/0/ru.iiec.cxxdroid/files/arm-linux-androideabi/lib;/data/user/0/ru.iiec.cxxdroid/files/sysroot/usr/lib]
+  implicit fwks: []
+
+
