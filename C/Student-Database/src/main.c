@@ -1,10 +1,8 @@
 #include "../include/HashMap.h"
 
-#define printStringf(format, args...) fprintf(stdout, format, args)
+#define printfString(format, args...) fprintf(stdout, format, args)
 #define printString(string) fprintf(stdout, "%s\n", string)
-#define printCmd(string) fprintf(stdout, "# %s\n-> ", string)
-#define printInt(integer) fprintf(stdout, "%u\n", integer)
-#define size(array) sizeof(array) / sizeof(array);
+#define printCmd(string) fprintf(stdout, "$ %s\n-> ", string)
 
 #define DEVIDER "=============================="
 
@@ -50,13 +48,13 @@ void readLine(int totalCharsToRead, char *cache) {
 }
 
 void printStudent(Student student) {
-    printStringf("     ID : %d\n   Name : %s\nAddress : %s\n    Age : %d\n    GPA : %.2f\n",
+    printfString("     ID : %d\n   Name : %s\nAddress : %s\n    Age : %d\n    GPA : %.2f\n",
         student.id, student.name, student.address, student.age, student.gpa);
 }
 
 void listAllStudents() {
     int studentCount = 0, noStudent = 1, firstDivider = 1;
-    for (int i = 0; i < databaseSize(); i++) {
+    for (int i = 0; i < table_size; i++) {
         if (students[i].id != 0) {
             noStudent = 0;
             if (firstDivider) {
@@ -82,7 +80,7 @@ void listAllStudents() {
     if (noStudent)
         printString("No Student Found");
     else
-        fprintf(stdout, "Total students %d\n", studentCount);
+        printfString("Total %d students found in database\n", studentCount);
 }
 
 void updateStudent() {
@@ -95,9 +93,9 @@ void updateStudent() {
 
     if (students[hash_value].id == id) {
         studentNotFound = 0;
-        student = & students[hash_value];
+        student = &students[hash_value];
     } else if (students[hash_value].next != NULL) {
-        Student * current = students[hash_value].next;
+        Student *current = students[hash_value].next;
         while (current != NULL) {
             if (current -> id == id) {
                 student = current;
@@ -111,9 +109,9 @@ void updateStudent() {
         printString("Student not found");
     } else if (student != NULL) {
         printCmd("Enter Name");
-        readLine(20, student -> name);
+        readLine(name_size, student -> name);
         printCmd("Enter Address");
-        readLine(50, student -> address);
+        readLine(address_size, student -> address);
         GetStudentAge: {
             printCmd("Enter Age");
             student -> age = readInt();
@@ -178,7 +176,7 @@ void deleteStudent() {
     if (studentNotFound)
         printString("Student not found");
     else
-        printString("Student Deleted From Database");
+        printString("Student deleted from database");
 }
 
 int compareName(char *first, char *second) {
@@ -192,15 +190,15 @@ int compareName(char *first, char *second) {
 }
 
 void searchStudentName() {
-    int noStudent = 1, firstDivider = 1;
-    char name[20];
+    int noStudent = 1, firstDivider = 1, studentCount = 0;
+    char name[name_size];
     printCmd("Enter Student Name");
-    readLine(20, name);
+    readLine(name_size, name);
 
-    for (int i = 0; i < databaseSize(); i++) {
+    for (int i = 0; i < table_size; i++) {
         if (students[i].id != 0) {
             if (compareName(students[i].name, name)) {
-                noStudent = 0;
+                noStudent = 0, studentCount++;
                 if (firstDivider) {
                     firstDivider = 0;
                     printString(DEVIDER);
@@ -208,11 +206,11 @@ void searchStudentName() {
                 printStudent(students[i]);
                 printString(DEVIDER);
             }
-            else if (students[i].next != NULL) {
+            if (students[i].next != NULL) {
                 Student *current = students[i].next;
 	        	while (current != NULL) {
 		        	if (compareName(current -> name, name)) {
-		        	    noStudent = 0;
+		        	    noStudent = 0, studentCount++;
 		        	    if (firstDivider) {
                             firstDivider = 0;
                             printString(DEVIDER);
@@ -227,6 +225,51 @@ void searchStudentName() {
     }
     if (noStudent)
         printString("No Student Found");
+    else
+        printfString("Total %d students found with given name\n", studentCount);
+}
+
+void searchStudentAge() {
+    int noStudent = 1, firstDivider = 1, studentCount = 0, age;
+    GetStudentAge: {
+        printCmd("Enter Age");
+        age = readInt();
+    }
+    if (age == 0) {
+        printString("Invalid Age");
+        goto GetStudentAge;
+    }
+
+    for (int i = 0; i < table_size; i++) {
+        if (students[i].age == age) {
+            noStudent = 0, studentCount++;
+            if (firstDivider) {
+                firstDivider = 0;
+                printString(DEVIDER);
+            }
+            printStudent(students[i]);
+            printString(DEVIDER);
+        }
+        if (students[i].next != NULL) {
+            Student *current = students[i].next;
+            while (current != NULL) {
+                if (current -> age == age) {
+                    noStudent = 0, studentCount++;
+		        	if (firstDivider) {
+                        firstDivider = 0;
+                        printString(DEVIDER);
+                    }
+                    printStudent(*current);
+                    printString(DEVIDER);
+                }
+                current = current->next;
+            }
+        }
+    }
+    if (noStudent)
+        printString("No Student Found");
+    else
+        printfString("Total %d students found with given age\n", studentCount);
 }
 
 void searchStudentID() {
@@ -247,7 +290,7 @@ void searchStudentID() {
 void createStudent() {
     int id = 0, age = 0;
     double gpa = 0.0;
-    char name[20], address[50];
+    char name[name_size], address[address_size];
 
     GetStudentID: {
         printCmd("Enter Student ID");
@@ -261,9 +304,9 @@ void createStudent() {
         goto GetStudentID;
     }
     printCmd("Enter Name");
-    readLine(20, name);
+    readLine(name_size, name);
     printCmd("Enter Address");
-    readLine(50, address);
+    readLine(address_size, address);
     GetStudentAge: {
         printCmd("Enter Age");
         age = readInt();
@@ -285,12 +328,14 @@ void createStudent() {
     printString("Student Added To Database");
 }
 
+/** Debugging functions **/
 void test() {
     putStudent(students, 12, "Rifat", "Durgapur", 17, 4.63);
     putStudent(students, 538, "Mahin", "Ashulia", 17, 5.00);
     putStudent(students, 801, "Rahim", "Kathgora", 18, 4.29);
     putStudent(students, 1064, "Mahin", "Kathgora", 18, 5.00);
 }
+
 void randomChar(char name[]) {
     char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char lower[] = "abcdefghijklmnopqrstuvwxyz";
@@ -310,7 +355,9 @@ void randomInput() {
 
 int main() {
     char command[11];
-    students = createDatabase();test();randomInput();
+    students = createDatabase();
+    // Comment out below two lines
+    test(); 
     printString("Running Student Database CRUD Application");
     Executive : {
         printCmd("Enter Command");
@@ -323,18 +370,28 @@ int main() {
             searchStudentID();
         else if (!strcmp(command, "search name"))
             searchStudentName();
+        else if (!strcmp(command, "search age"))
+            searchStudentAge();
         else if (!strcmp(command, "list"))
             listAllStudents();
         else if (!strcmp(command, "delete"))
             deleteStudent();
         else if (!strcmp(command, "clear")) {
             students = createDatabase();
-            printString("Database Cleared");
+            printString("Database cleared");
         } else if (!strcmp(command, "stop")) {
-            printString("Application Stopped");
+            printString("Application stopped");
             exit(0);
         } else if (!strcmp(command, "help"))
-            printString("create - add a student\nupdate - update student info\nsearch id - search for a student with specific id\nsearch name - search for a student with specific name\ndelete - delete a student\nlist - list of all students\nclear - clear students database\nstop - stop application");
+            printString("create      - Add a student in database\n"
+                        "update      - Update a student info in database\n"
+                        "search id   - Find a student with specific id\n"
+                        "search name - Find a student with similar name\n"
+                        "search age  - Find all students with given age\n"
+                        "delete      - Delete a student from database\n"
+                        "list        - List of all students in database\n"
+                        "clear       - Clear students database\n"
+                        "stop        - Stop this application");
         else
             printString("Unknown command");
     }

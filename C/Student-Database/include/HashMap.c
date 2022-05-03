@@ -1,16 +1,9 @@
 #include "HashMap.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-const Student EmptyStudent = {0, 0, 0.0, NULL, "", ""};
-
-int databaseSize() {
-    return 263;
-}
+const Student EmptyStudent = {0, 0, 0.0, "", "", NULL};
 
 int hash(int key) {
-	return abs(key % databaseSize());
+	return key % table_size;
 }
 
 Student getStudent(Student *map, int id) {
@@ -30,7 +23,7 @@ Student getStudent(Student *map, int id) {
 	return EmptyStudent;
 }
 
-void putStudent(Student *map, int id, char name[20], char address[50], int age, double gpa) {
+void putStudent(Student *map, int id, char name[name_size], char address[address_size], int age, double gpa) {
 	int hash_value = hash(id);
 	
 	if (map[hash_value].id != id && map[hash_value].id != 0) {
@@ -52,6 +45,6 @@ void putStudent(Student *map, int id, char name[20], char address[50], int age, 
 }
 
 Student *createDatabase() {
-	Student *temp = malloc(databaseSize() * sizeof(Student));
+	Student *temp = malloc(table_size * sizeof(Student));
 	return temp;
 }
