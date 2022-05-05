@@ -11,8 +11,7 @@ static Student *students = NULL;
 int readInt() {
     // Terminate all \n character in stdout, if it was printed right before calling this function
     scanf("\n");
-    int invalid = 0;
-    int result = 0;
+    int invalid = 0, result = 0;
     char current = '-';
     while (1) {
         scanf("%c", &current);
@@ -27,6 +26,31 @@ int readInt() {
     if (invalid)
         result = 0;
     return result;
+}
+
+double readDouble() {
+    scanf("\n");
+    double result = 0, invalid = 0, decimalEnd = 0;
+    char current = '-';
+    while (1) {
+        scanf("%c", &current);
+        if (current == '\n')
+            break;
+        else if (current == '.') {
+            decimalEnd = 1;
+        }
+        else {
+            current -= '0';
+            if (current >= 0 && current <= 9) {
+                result = (result * 10) + current;
+                decimalEnd *= 10;
+            } else
+                invalid = 1;
+        }
+    }
+    if (invalid)
+        return 0;
+    return result / (decimalEnd == 0 ? 1 : decimalEnd);
 }
 
 void readLine(int totalCharsToRead, char *cache) {
@@ -122,7 +146,7 @@ void updateStudent() {
         }
         GetStudentGPA: {
             printCmd("Enter GPA");
-            scanf("%lf", &(student -> gpa));
+            student -> gpa = readDouble();
         }
         if (student -> gpa == 0.0) {
             printString("Invalid GPA");
@@ -317,7 +341,7 @@ void createStudent() {
     }
     GetStudentGPA: {
         printCmd("Enter GPA");
-        scanf("%lf", &gpa);
+        gpa = readDouble();
     }
     if (gpa == 0.0) {
         printString("Invalid GPA");
