@@ -1,7 +1,5 @@
 #include "HashMap.h"
 
-const Student EmptyStudent = {0, 0, 0.0, "", "", NULL};
-
 int hash(int key) {
 	return key % table_size;
 }
@@ -20,7 +18,7 @@ Student getStudent(Student *map, int id) {
 			current = current -> next;
 		}
 	}
-	return EmptyStudent;
+	return (Student){0};
 }
 
 void putStudent(Student *map, int id, char name[name_size], char address[address_size], int age, double gpa) {
@@ -44,7 +42,25 @@ void putStudent(Student *map, int id, char name[name_size], char address[address
 	}
 }
 
-Student *createDatabase() {
+void clearStudent(Student *student) {
+    free(student -> next);
+    *student = (Student){0};
+}
+
+void clearStaticDatabase(Student *array) {
+    for (int i = 0; i < table_size; i++) {
+        clearStudent(&array[i]);
+        array[i] = (Student){0};
+    }
+}
+
+Student *createStaticDatabase(Student *array) {
+	for (int i = 0; i < table_size; i++)
+	    array[i] = (Student){0};
+	return array;
+}
+
+Student *createHeapDatabase() {
 	Student *temp = malloc(table_size * sizeof(Student));
 	return temp;
 }

@@ -36,15 +36,15 @@ double readDouble() {
         scanf("%c", &current);
         if (current == '\n')
             break;
-        else if (current == '.') {
+        else if (current == '.')
             decimalEnd = 1;
-        }
         else {
             current -= '0';
             if (current >= 0 && current <= 9) {
                 result = (result * 10) + current;
                 decimalEnd *= 10;
-            } else
+            }
+            else
                 invalid = 1;
         }
     }
@@ -62,9 +62,8 @@ void readLine(int totalCharsToRead, char *cache) {
         if (current == '\n') {
             cache[i] = '\0';
             // Trimming spaces from right side
-            while (cache[--i] == ' ') {
-                cache[i] = '\0';
-            }
+            /*while (cache[--i] == ' ')
+                cache[i] = '\0';*/
             break;
         }
         cache[i] = current;
@@ -72,8 +71,11 @@ void readLine(int totalCharsToRead, char *cache) {
 }
 
 void printStudent(Student student) {
-    printfString("     ID : %d\n   Name : %s\nAddress : %s\n    Age : %d\n    GPA : %.2f\n",
-        student.id, student.name, student.address, student.age, student.gpa);
+    printfString("     ID : %d\n"
+                 "   Name : %s\nAddress : %s\n"
+                 "    Age : %d\n"
+                 "    GPA : %.2f\n",
+                 student.id, student.name, student.address, student.age, student.gpa);
 }
 
 void listAllStudents() {
@@ -90,14 +92,14 @@ void listAllStudents() {
             printString(DEVIDER);
             if (students[i].next != NULL) {
                 Student *current = students[i].next;
-	        	while (current != NULL) {
-		        	if (current -> id != 0) {
-		        	    studentCount++;
-		        	    printStudent(*current);
+                while (current != NULL) {
+                    if (current->id != 0) {
+                        studentCount++;
+                        printStudent(*current);
                         printString(DEVIDER);
-		        	}
-			        current = current -> next;
-	        	}
+                    }
+                    current = current->next;
+                }
             }
         }
     }
@@ -118,39 +120,42 @@ void updateStudent() {
     if (students[hash_value].id == id) {
         studentNotFound = 0;
         student = &students[hash_value];
-    } else if (students[hash_value].next != NULL) {
+    }
+    else if (students[hash_value].next != NULL) {
         Student *current = students[hash_value].next;
         while (current != NULL) {
-            if (current -> id == id) {
+            if (current->id == id) {
                 student = current;
                 studentNotFound = 0;
             }
-            current = current -> next;
+            current = current->next;
         }
     }
 
-    if (studentNotFound) {
+    if (studentNotFound)
         printString("Student not found");
-    } else if (student != NULL) {
+    else if (student != NULL) {
         printCmd("Enter Name");
-        readLine(name_size, student -> name);
+        readLine(name_size, student->name);
         printCmd("Enter Address");
-        readLine(address_size, student -> address);
-        GetStudentAge: {
+        readLine(address_size, student->address);
+        while (1) {
             printCmd("Enter Age");
-            student -> age = readInt();
+            student->age = readInt();
+
+            if (student->age == 0)
+                printString("Invalid Age");
+            else
+                break;
         }
-        if (student -> age == 0) {
-            printString("Invalid Age");
-            goto GetStudentAge;
-        }
-        GetStudentGPA: {
+        while (1) {
             printCmd("Enter GPA");
-            student -> gpa = readDouble();
-        }
-        if (student -> gpa == 0.0) {
-            printString("Invalid GPA");
-            goto GetStudentGPA;
+            student->gpa = readDouble();
+
+            if (student->gpa == 0.0)
+                printString("Invalid GPA");
+            else
+                break;
         }
         printString("Data Updated");
     }
@@ -158,20 +163,20 @@ void updateStudent() {
 
 void replaceStudent(Student *one, Student *two) {
     if (two != NULL) {
-        one -> id = two -> id;
-        strcpy(one -> name, two -> name);
-        strcpy(one -> address, two -> address);
-        one -> age = two -> age;
-        one -> gpa = two -> gpa;
-        one -> next = two -> next;
-    } else {
-        one -> id = 0;
-        one -> name[0] = '\0';
-        one -> address[0] = '\0';
-        one -> age = 0;
-        one -> gpa = 0.0;
+        one->id = two->id;
+        strcpy(one->name, two->name);
+        strcpy(one->address, two->address);
+        one->age = two->age;
+        one->gpa = two->gpa;
+        one->next = two->next;
     }
-        
+    else {
+        one->id = 0;
+        one->name[0] = '\0';
+        one->address[0] = '\0';
+        one->age = 0;
+        one->gpa = 0.0;
+    }
 }
 
 void deleteStudent() {
@@ -184,16 +189,17 @@ void deleteStudent() {
     if (students[hash_value].id == id) {
         studentNotFound = 0;
         replaceStudent(&students[hash_value], students[hash_value].next);
-    } else if (students[hash_value].next != NULL) {
+    }
+    else if (students[hash_value].next != NULL) {
         Student *previous = &students[hash_value];
         Student *current = students[hash_value].next;
         while (current != NULL) {
-            if (current -> id == id) {
+            if (current->id == id) {
                 studentNotFound = 0;
-                previous -> next = current -> next;
+                previous->next = current->next;
             }
             previous = current;
-            current = current -> next;
+            current = current->next;
         }
     }
 
@@ -205,12 +211,11 @@ void deleteStudent() {
 
 int compareName(char *first, char *second) {
     char *found = strstr(first, second);
-    
+
     if (found == NULL)
         return 0;
-    else {
+    else
         return 1;
-    }
 }
 
 void searchStudentName() {
@@ -232,18 +237,18 @@ void searchStudentName() {
             }
             if (students[i].next != NULL) {
                 Student *current = students[i].next;
-	        	while (current != NULL) {
-		        	if (compareName(current -> name, name)) {
-		        	    noStudent = 0, studentCount++;
-		        	    if (firstDivider) {
+                while (current != NULL) {
+                    if (compareName(current->name, name)) {
+                        noStudent = 0, studentCount++;
+                        if (firstDivider) {
                             firstDivider = 0;
                             printString(DEVIDER);
                         }
-		        	    printStudent(*current);
+                        printStudent(*current);
                         printString(DEVIDER);
-		        	}
-			        current = current -> next;
-	        	}
+                    }
+                    current = current->next;
+                }
             }
         }
     }
@@ -255,13 +260,13 @@ void searchStudentName() {
 
 void searchStudentAge() {
     int noStudent = 1, firstDivider = 1, studentCount = 0, age;
-    GetStudentAge: {
+    while (1) {
         printCmd("Enter Age");
         age = readInt();
-    }
-    if (age == 0) {
-        printString("Invalid Age");
-        goto GetStudentAge;
+        if (age == 0)
+            printString("Invalid Age");
+        else
+            break;
     }
 
     for (int i = 0; i < table_size; i++) {
@@ -277,9 +282,9 @@ void searchStudentAge() {
         if (students[i].next != NULL) {
             Student *current = students[i].next;
             while (current != NULL) {
-                if (current -> age == age) {
+                if (current->age == age) {
                     noStudent = 0, studentCount++;
-		        	if (firstDivider) {
+                    if (firstDivider) {
                         firstDivider = 0;
                         printString(DEVIDER);
                     }
@@ -316,36 +321,35 @@ void createStudent() {
     double gpa = 0.0;
     char name[name_size], address[address_size];
 
-    GetStudentID: {
+    while (1) {
         printCmd("Enter Student ID");
         id = readInt();
-    }
-    if (getStudent(students, id).id != 0) {
-        printString("Student ID Exists");
-        goto GetStudentID;
-    } else if (id == 0) {
-        printString("Invalid ID");
-        goto GetStudentID;
+        if (getStudent(students, id).id != 0)
+            printString("Student ID Exists");
+        else if (id == 0)
+            printString("Invalid ID");
+        else
+            break;
     }
     printCmd("Enter Name");
     readLine(name_size, name);
     printCmd("Enter Address");
     readLine(address_size, address);
-    GetStudentAge: {
+    while (1) {
         printCmd("Enter Age");
         age = readInt();
+        if (age == 0)
+            printString("Invalid Age");
+        else
+            break;
     }
-    if (age == 0) {
-        printString("Invalid Age");
-        goto GetStudentAge;
-    }
-    GetStudentGPA: {
+    while (1) {
         printCmd("Enter GPA");
         gpa = readDouble();
-    }
-    if (gpa == 0.0) {
-        printString("Invalid GPA");
-        goto GetStudentGPA;
+        if (gpa == 0.0)
+            printString("Invalid GPA");
+        else
+            break;
     }
 
     putStudent(students, id, name, address, age, gpa);
@@ -379,11 +383,12 @@ void randomInput() {
 
 int main() {
     char command[11];
-    students = createDatabase();
-    // Comment out below two lines
-    test(); 
+    Student database[table_size];
+    students = createStaticDatabase(database);
+    // Comment out the line below, it's meant for debugging purposes
+    test();
     printString("Running Student Database CRUD Application");
-    Executive : {
+    while (1) {
         printCmd("Enter Command");
         readLine(11, command);
         if (!strcmp(command, "create"))
@@ -401,12 +406,14 @@ int main() {
         else if (!strcmp(command, "delete"))
             deleteStudent();
         else if (!strcmp(command, "clear")) {
-            students = createDatabase();
+            clearStaticDatabase(database);
             printString("Database cleared");
-        } else if (!strcmp(command, "stop")) {
+        }
+        else if (!strcmp(command, "stop")) {
             printString("Application stopped");
-            exit(0);
-        } else if (!strcmp(command, "help"))
+            break;
+        }
+        else if (!strcmp(command, "help"))
             printString("create      - Add a student in database\n"
                         "update      - Update a student info in database\n"
                         "search id   - Find a student with specific id\n"
@@ -419,6 +426,5 @@ int main() {
         else
             printString("Unknown command");
     }
-    goto Executive;
     return 0;
 }

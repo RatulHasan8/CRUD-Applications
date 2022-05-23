@@ -7,15 +7,13 @@
 #define address_size 50
 #define table_size 263
 
-struct Student {
+struct student {
 	int id, age;
 	double gpa;
 	char name[name_size], address[address_size];
-	struct Student *next;
+	struct student *next;
 };
-typedef struct Student Student;
-
-int databaseSize();
+typedef struct student Student;
 
 int hash(int key);
 
@@ -23,8 +21,10 @@ Student getStudent(Student *map, int id);
 
 void putStudent(Student *map, int id, char name[name_size], char address[address_size], int age, double gpa);
 
-void clearStudentA(Student *student);
+void clearStudent(Student *student);
 
-void clearStudent(Student student);
+void clearStaticDatabase(Student *array);
 
-Student *createDatabase();
+Student *createHeapDatabase();
+
+Student *createStaticDatabase(Student *array);
