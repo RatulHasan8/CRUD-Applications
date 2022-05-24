@@ -1,81 +1,20 @@
 #include "../include/HashMap.h"
+#include "../include/custom-stdin.h"
 
-#define printfString(format, args...) fprintf(stdout, format, args)
+#define printf(format, args...) fprintf(stdout, format, args)
 #define printString(string) fprintf(stdout, "%s\n", string)
 #define printCmd(string) fprintf(stdout, "$ %s\n-> ", string)
 
-#define DEVIDER "=============================="
+#define DEVIDER "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 static Student *students = NULL;
 
-int readInt() {
-    // Terminate all \n character in stdout, if it was printed right before calling this function
-    scanf("\n");
-    int invalid = 0, result = 0;
-    char current = '-';
-    while (1) {
-        scanf("%c", &current);
-        if (current == '\n')
-            break;
-        current -= '0';
-        if (current >= 0 && current <= 9)
-            result = (result * 10) + current;
-        else
-            invalid = 1;
-    }
-    if (invalid)
-        result = 0;
-    return result;
-}
-
-double readDouble() {
-    scanf("\n");
-    double result = 0, invalid = 0, decimalEnd = 0;
-    char current = '-';
-    while (1) {
-        scanf("%c", &current);
-        if (current == '\n')
-            break;
-        else if (current == '.')
-            decimalEnd = 1;
-        else {
-            current -= '0';
-            if (current >= 0 && current <= 9) {
-                result = (result * 10) + current;
-                decimalEnd *= 10;
-            }
-            else
-                invalid = 1;
-        }
-    }
-    if (invalid)
-        return 0;
-    return result / (decimalEnd == 0 ? 1 : decimalEnd);
-}
-
-void readLine(int totalCharsToRead, char *cache) {
-    // Terminate all \n character in stdout, if it was printed right before calling this function
-    scanf("\n");
-    char current = '-';
-    for (int i = 0; i < totalCharsToRead; i++) {
-        scanf("%c", &current);
-        if (current == '\n') {
-            cache[i] = '\0';
-            // Trimming spaces from right side
-            /*while (cache[--i] == ' ')
-                cache[i] = '\0';*/
-            break;
-        }
-        cache[i] = current;
-    }
-}
-
 void printStudent(Student student) {
-    printfString("     ID : %d\n"
-                 "   Name : %s\nAddress : %s\n"
-                 "    Age : %d\n"
-                 "    GPA : %.2f\n",
-                 student.id, student.name, student.address, student.age, student.gpa);
+    printf("     ID : %d\n", student.id);
+    printf("   Name : %s\n", student.name);
+    printf("Address : %s\n", student.address);
+    printf("    Age : %d\n", student.age);
+    printf("    GPA : %.2f\n", student.gpa);
 }
 
 void listAllStudents() {
@@ -106,7 +45,7 @@ void listAllStudents() {
     if (noStudent)
         printString("No Student Found");
     else
-        printfString("Total %d students found in database\n", studentCount);
+        printf("Total %d students found in database\n", studentCount);
 }
 
 void updateStudent() {
@@ -143,7 +82,7 @@ void updateStudent() {
             printCmd("Enter Age");
             student->age = readInt();
 
-            if (student->age == 0)
+            if (student->age <= 0)
                 printString("Invalid Age");
             else
                 break;
@@ -152,7 +91,7 @@ void updateStudent() {
             printCmd("Enter GPA");
             student->gpa = readDouble();
 
-            if (student->gpa == 0.0)
+            if (student->gpa <= 0.0)
                 printString("Invalid GPA");
             else
                 break;
@@ -209,13 +148,22 @@ void deleteStudent() {
         printString("Student deleted from database");
 }
 
-int compareName(char *first, char *second) {
-    char *found = strstr(first, second);
+int match(char *a, char *b) {
+    while (*b != '\0')
+        if (*a++ != *b++)
+            return 0;
+    return (*a == ' ' || *a == '\0');
+}
 
-    if (found == NULL)
-        return 0;
-    else
-        return 1;
+int compareName(char *base, char *pattern) {
+    int matched = match(base, pattern);
+    
+    while (*base++ != '\0') {
+        if (matched)
+            return 1;
+        matched = match(base, pattern);
+    }
+    return 0;
 }
 
 void searchStudentName() {
@@ -255,7 +203,7 @@ void searchStudentName() {
     if (noStudent)
         printString("No Student Found");
     else
-        printfString("Total %d students found with given name\n", studentCount);
+        printf("Total %d students found with given name\n", studentCount);
 }
 
 void searchStudentAge() {
@@ -263,7 +211,7 @@ void searchStudentAge() {
     while (1) {
         printCmd("Enter Age");
         age = readInt();
-        if (age == 0)
+        if (age <= 0)
             printString("Invalid Age");
         else
             break;
@@ -298,7 +246,7 @@ void searchStudentAge() {
     if (noStudent)
         printString("No Student Found");
     else
-        printfString("Total %d students found with given age\n", studentCount);
+        printf("Total %d students found with the given age\n", studentCount);
 }
 
 void searchStudentID() {
@@ -307,7 +255,7 @@ void searchStudentID() {
     id = readInt();
 
     Student student = getStudent(students, id);
-    if (student.id == 0)
+    if (student.id <= 0)
         printString("Student not found");
     else {
         printString(DEVIDER);
@@ -326,7 +274,7 @@ void createStudent() {
         id = readInt();
         if (getStudent(students, id).id != 0)
             printString("Student ID Exists");
-        else if (id == 0)
+        else if (id <= 0)
             printString("Invalid ID");
         else
             break;
@@ -338,7 +286,7 @@ void createStudent() {
     while (1) {
         printCmd("Enter Age");
         age = readInt();
-        if (age == 0)
+        if (age <= 0)
             printString("Invalid Age");
         else
             break;
@@ -346,7 +294,7 @@ void createStudent() {
     while (1) {
         printCmd("Enter GPA");
         gpa = readDouble();
-        if (gpa == 0.0)
+        if (gpa <= 0.0)
             printString("Invalid GPA");
         else
             break;
@@ -358,10 +306,10 @@ void createStudent() {
 
 /** Debugging functions **/
 void test() {
-    putStudent(students, 12, "Rifat", "Durgapur", 17, 4.63);
-    putStudent(students, 538, "Mahin", "Ashulia", 17, 5.00);
-    putStudent(students, 801, "Rahim", "Kathgora", 18, 4.29);
-    putStudent(students, 1064, "Mahin", "Kathgora", 18, 5.00);
+    putStudent(students, 12, "Arif Rahimullah", "Durgapur", 17, 4.63);
+    putStudent(students, 538, "Mahin Mia", "Ashulia", 17, 5.00);
+    putStudent(students, 801, "Rahim Alam", "Kathgora", 18, 4.29);
+    putStudent(students, 1064, "AMahina Begum", "Kathgora", 18, 5.00);
 }
 
 void randomChar(char name[]) {
@@ -380,6 +328,7 @@ void randomInput() {
         putStudent(students, abs((int)(rand() * rand() + rand() / 0.5)), name, "Kathgora", 18, rand() % 4 + 1.9);
     }
 }
+/** End of debugging functions **/
 
 int main() {
     char command[11];
@@ -387,7 +336,7 @@ int main() {
     students = createStaticDatabase(database);
     // Comment out the line below, it's meant for debugging purposes
     test();
-    printString("Running Student Database CRUD Application");
+    printString("Running - Student Database CRUD Application");
     while (1) {
         printCmd("Enter Command");
         readLine(11, command);

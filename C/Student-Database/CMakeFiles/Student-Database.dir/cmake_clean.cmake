@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Student-Database.dir/include/HashMap.c.o"
   "CMakeFiles/Student-Database.dir/include/HashMap.c.o.d"
+  "CMakeFiles/Student-Database.dir/include/custom-stdin.c.o"
+  "CMakeFiles/Student-Database.dir/include/custom-stdin.c.o.d"
   "CMakeFiles/Student-Database.dir/src/main.c.o"
   "CMakeFiles/Student-Database.dir/src/main.c.o.d"
   "Student-Database"

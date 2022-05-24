@@ -1,1 +1,1 @@
-/data/user/0/ru.iiec.cxxdroid/files/bin/clang -Wall -std=c99 -lm -ldl -llog -lz CMakeFiles/Student-Database.dir/include/HashMap.c.o CMakeFiles/Student-Database.dir/src/main.c.o -o Student-Database 
+/data/user/0/ru.iiec.cxxdroid/files/bin/clang -Wall -std=c99 -lm -ldl -llog -lz CMakeFiles/Student-Database.dir/include/HashMap.c.o CMakeFiles/Student-Database.dir/include/custom-stdin.c.o CMakeFiles/Student-Database.dir/src/main.c.o -o Student-Database 

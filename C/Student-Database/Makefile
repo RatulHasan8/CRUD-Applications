@@ -152,6 +152,30 @@ include/HashMap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Student-Database.dir/build.make CMakeFiles/Student-Database.dir/include/HashMap.c.s
 .PHONY : include/HashMap.c.s
 
+include/custom-stdin.o: include/custom-stdin.c.o
+.PHONY : include/custom-stdin.o
+
+# target to build an object file
+include/custom-stdin.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Student-Database.dir/build.make CMakeFiles/Student-Database.dir/include/custom-stdin.c.o
+.PHONY : include/custom-stdin.c.o
+
+include/custom-stdin.i: include/custom-stdin.c.i
+.PHONY : include/custom-stdin.i
+
+# target to preprocess a source file
+include/custom-stdin.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Student-Database.dir/build.make CMakeFiles/Student-Database.dir/include/custom-stdin.c.i
+.PHONY : include/custom-stdin.c.i
+
+include/custom-stdin.s: include/custom-stdin.c.s
+.PHONY : include/custom-stdin.s
+
+# target to generate assembly for a file
+include/custom-stdin.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Student-Database.dir/build.make CMakeFiles/Student-Database.dir/include/custom-stdin.c.s
+.PHONY : include/custom-stdin.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -188,6 +212,9 @@ help:
 	@echo "... include/HashMap.o"
 	@echo "... include/HashMap.i"
 	@echo "... include/HashMap.s"
+	@echo "... include/custom-stdin.o"
+	@echo "... include/custom-stdin.i"
+	@echo "... include/custom-stdin.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

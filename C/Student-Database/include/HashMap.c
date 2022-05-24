@@ -43,7 +43,15 @@ void putStudent(Student *map, int id, char name[name_size], char address[address
 }
 
 void clearStudent(Student *student) {
-    free(student -> next);
+    if (student -> next != NULL) {
+        Student *current = student -> next;
+        while (current -> next != NULL) {
+            Student *previous = student -> next;
+            current = previous -> next;
+            free(previous);
+        }
+        free(student -> next);
+    }
     *student = (Student){0};
 }
 

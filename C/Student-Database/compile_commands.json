@@ -6,6 +6,11 @@
 },
 {
   "directory": "/storage/emulated/0/Programming/CRUD-Applications/Student-Database",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang  -I/storage/emulated/0/Programming/CRUD-Applications/Student-Database/include -I/storage/emulated/0/Programming/CRUD-Applications/Student-Database/src -Wall -std=c99 -o CMakeFiles/Student-Database.dir/include/custom-stdin.c.o -c /storage/emulated/0/Programming/CRUD-Applications/Student-Database/include/custom-stdin.c",
+  "file": "/storage/emulated/0/Programming/CRUD-Applications/Student-Database/include/custom-stdin.c"
+},
+{
+  "directory": "/storage/emulated/0/Programming/CRUD-Applications/Student-Database",
   "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang  -I/storage/emulated/0/Programming/CRUD-Applications/Student-Database/include -I/storage/emulated/0/Programming/CRUD-Applications/Student-Database/src -Wall -std=c99 -o CMakeFiles/Student-Database.dir/src/main.c.o -c /storage/emulated/0/Programming/CRUD-Applications/Student-Database/src/main.c",
   "file": "/storage/emulated/0/Programming/CRUD-Applications/Student-Database/src/main.c"
 }
