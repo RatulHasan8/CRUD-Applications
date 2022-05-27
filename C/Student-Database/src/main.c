@@ -109,13 +109,8 @@ void replaceStudent(Student *one, Student *two) {
         one->gpa = two->gpa;
         one->next = two->next;
     }
-    else {
-        one->id = 0;
-        one->name[0] = '\0';
-        one->address[0] = '\0';
-        one->age = 0;
-        one->gpa = 0.0;
-    }
+    else
+        *one = (Student){0};
 }
 
 void deleteStudent() {
@@ -148,20 +143,22 @@ void deleteStudent() {
         printString("Student deleted from database");
 }
 
-int match(char *a, char *b) {
+int match(char *a, char *b, int beginning) {
+    if (!beginning && a[-1] != ' ' && a[-1] != '.' && a[-1] != ',')
+        return 0;
     while (*b != '\0')
         if (*a++ != *b++)
             return 0;
-    return (*a == ' ' || *a == '\0');
+    return (*a == ' ' || *a == '\0' || *a == ',');
 }
 
-int compareName(char *base, char *pattern) {
-    int matched = match(base, pattern);
+int compare(char *base, char *pattern) {
+    int matched = match(base, pattern, 1);
     
     while (*base++ != '\0') {
         if (matched)
             return 1;
-        matched = match(base, pattern);
+        matched = match(base, pattern, 0);
     }
     return 0;
 }
@@ -174,7 +171,7 @@ void searchStudentName() {
 
     for (int i = 0; i < table_size; i++) {
         if (students[i].id != 0) {
-            if (compareName(students[i].name, name)) {
+            if (compare(students[i].name, name)) {
                 noStudent = 0, studentCount++;
                 if (firstDivider) {
                     firstDivider = 0;
@@ -186,7 +183,7 @@ void searchStudentName() {
             if (students[i].next != NULL) {
                 Student *current = students[i].next;
                 while (current != NULL) {
-                    if (compareName(current->name, name)) {
+                    if (compare(current->name, name)) {
                         noStudent = 0, studentCount++;
                         if (firstDivider) {
                             firstDivider = 0;
@@ -204,6 +201,46 @@ void searchStudentName() {
         printString("No Student Found");
     else
         printf("Total %d students found with given name\n", studentCount);
+}
+
+void searchStudentAddress() {
+    int noStudent = 1, firstDivider = 1, studentCount = 0;
+    char address [address_size];
+    printCmd("Enter Address");
+    readLine(address_size, address);
+
+    for (int i = 0; i < table_size; i++) {
+        if (students[i].id != 0) {
+            if (compare(students[i].address, address)) {
+                noStudent = 0, studentCount++;
+                if (firstDivider) {
+                    firstDivider = 0;
+                    printString(DEVIDER);
+                }
+                printStudent(students[i]);
+                printString(DEVIDER);
+            }
+            if (students[i].next != NULL) {
+                Student *current = students[i].next;
+                while (current != NULL) {
+                    if (compare(current->address, address)) {
+                        noStudent = 0, studentCount++;
+                        if (firstDivider) {
+                            firstDivider = 0;
+                            printString(DEVIDER);
+                        }
+                        printStudent(*current);
+                        printString(DEVIDER);
+                    }
+                    current = current->next;
+                }
+            }
+        }
+    }
+    if (noStudent)
+        printString("No Student Found");
+    else
+        printf("Total %d students found with given address\n", studentCount);
 }
 
 void searchStudentAge() {
@@ -306,10 +343,10 @@ void createStudent() {
 
 /** Debugging functions **/
 void test() {
-    putStudent(students, 12, "Arif Rahimullah", "Durgapur", 17, 4.63);
-    putStudent(students, 538, "Mahin Mia", "Ashulia", 17, 5.00);
-    putStudent(students, 801, "Rahim Alam", "Kathgora", 18, 4.29);
-    putStudent(students, 1064, "AMahina Begum", "Kathgora", 18, 5.00);
+    putStudent(students, 12, "Arif Rahimullah", "Durbin, Gulshan", 17, 4.63);
+    putStudent(students, 538, "Mahin Mia", "ST.House, Polton", 17, 5.00);
+    putStudent(students, 801, "Rahim Alam", "Karim Bazar, Sazipur", 18, 4.29);
+    putStudent(students, 1064, "A.Mahin Begum", "No.1 Gazirchat, Bhairov", 18, 5.00);
 }
 
 void randomChar(char name[]) {
@@ -331,7 +368,7 @@ void randomInput() {
 /** End of debugging functions **/
 
 int main() {
-    char command[11];
+    char command[14];
     Student database[table_size];
     students = createStaticDatabase(database);
     // Comment out the line below, it's meant for debugging purposes
@@ -339,7 +376,7 @@ int main() {
     printString("Running - Student Database CRUD Application");
     while (1) {
         printCmd("Enter Command");
-        readLine(11, command);
+        readLine(sizeof(command)/sizeof(*command), command);
         if (!strcmp(command, "create"))
             createStudent();
         else if (!strcmp(command, "update"))
@@ -348,6 +385,8 @@ int main() {
             searchStudentID();
         else if (!strcmp(command, "search name"))
             searchStudentName();
+        else if (!strcmp(command, "search address"))
+            searchStudentAddress();
         else if (!strcmp(command, "search age"))
             searchStudentAge();
         else if (!strcmp(command, "list"))
@@ -363,15 +402,16 @@ int main() {
             break;
         }
         else if (!strcmp(command, "help"))
-            printString("create      - Add a student in database\n"
-                        "update      - Update a student info in database\n"
-                        "search id   - Find a student with specific id\n"
-                        "search name - Find a student with similar name\n"
-                        "search age  - Find all students with given age\n"
-                        "delete      - Delete a student from database\n"
-                        "list        - List of all students in database\n"
-                        "clear       - Clear students database\n"
-                        "stop        - Stop this application");
+            printString("create         - Add a student in database\n"
+                        "update         - Update a student info in database\n"
+                        "search id      - Find a student with specific id\n"
+                        "search name    - Find all students with similar name\n"
+                        "search address - Find all students with similar address\n"
+                        "search age     - Find all students with same age\n"
+                        "delete         - Delete a student from database\n"
+                        "list           - List of all students in database\n"
+                        "clear          - Clear students database\n"
+                        "stop           - Stop this application");
         else
             printString("Unknown command");
     }
