@@ -7,6 +7,6 @@ A list of all crud-applications on this repo is given below
 
 |  Index  | Name | Direct Link |
 |---------|------|-------------|
-|1|Student Database|[Click Here](https://github.com/ratulhasanrahat/CRUD-Applications/tree/main/C/Student-Database)
+|1|Student Database|[Click Here](C/Student-Database)
 
 
