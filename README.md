@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.icons8.com/clouds/500/000000/database.png"
+    <img height=150 width=150 src="https://img.icons8.com/clouds/500/000000/database.png"
 </p>
 
 # &nbsp;Student Database
@@ -8,8 +8,8 @@
 # &nbsp;Supported Commands
  Given below a list of all supported commands in this application
 
-|  Command  | Info |
-|------------------------|----------|
+|  Command  | Information |
+|------------------------|----------------------|
 | create | Add a new student in the database |
 | update | Update a student info which is available in database |
 | search id | Find a student with specific id |
