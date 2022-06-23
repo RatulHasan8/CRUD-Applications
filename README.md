@@ -2,10 +2,16 @@
     <img height=150 width=150 src="database.png"
 </p>
 
-# &nbsp;Student Database
- A CRUD application that relies on hashing algorithm to store and retrieve data
- 
-# &nbsp;Supported Commands
+<h1 align="center">
+
+  <b>Student Database</b>
+
+</h1>
+ <p align="center">
+    A CRUD application that relies on hashing algorithm to store and retrieve data
+ </p>
+    
+# &nbsp;Commands
  Given below a list of all supported commands in this application
 
 |  Command  | Information |
