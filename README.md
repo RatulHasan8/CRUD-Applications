@@ -1,5 +1,5 @@
 <p align="center">
-    <img height=150 width=150 src="https://img.icons8.com/clouds/500/000000/database.png"
+    <img height=150 width=150 src="database.png"
 </p>
 
 # &nbsp;Student Database
