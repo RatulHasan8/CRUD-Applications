@@ -3,14 +3,15 @@
 </p>
 
 <h1 align="center">
-
   <b>Student Database</b>
-
 </h1>
- <p align="center">
-    A CRUD application that relies on hashing algorithm to store and retrieve data
- </p>
-    
+ <div align="center">
+    <a href="https://www.codefactor.io/repository/github/ratul-hsan/student-database">
+        <img src="https://img.shields.io/badge/CodeFactor-A+-gray.svg?colorA=515151&colorB=05A464&style=for-the-badge" alt="CodeFactor" />
+    </a>
+    <p>A CRUD application that relies on hashing algorithm to store and retrieve data</p>
+</div>
+
 # &nbsp;Commands
  Given below a list of all supported commands in this application
 
